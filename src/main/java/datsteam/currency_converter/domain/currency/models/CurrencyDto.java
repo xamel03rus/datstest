@@ -1,11 +1,10 @@
 package datsteam.currency_converter.domain.currency.models;
 
-import datsteam.currency_converter.domain.currency.enums.CurrencyInEnum;
-import datsteam.currency_converter.domain.currency.enums.CurrencyOutEnum;
+import datsteam.currency_converter.domain.currency.enums.CurrencyEnum;
 
 public class CurrencyDto {
-    private CurrencyInEnum currencyIn;
-    private CurrencyOutEnum currencyOut;
+    private CurrencyEnum currencyIn;
+    private CurrencyEnum currencyOut;
     private Float value;
     private Float count;
     private Float sum;
@@ -13,19 +12,17 @@ public class CurrencyDto {
     public CurrencyDto() {
     }
 
-    public CurrencyDto(CurrencyInEnum currencyIn, CurrencyOutEnum currencyOut, Float value) {
+    public CurrencyDto(CurrencyEnum currencyIn, CurrencyEnum currencyOut, Float value) {
         this.currencyIn = currencyIn;
         this.currencyOut = currencyOut;
         this.value = value;
-        this.count = count;
-        this.sum = sum;
     }
 
-    public CurrencyInEnum getCurrencyIn() {
+    public CurrencyEnum getCurrencyIn() {
         return this.currencyIn;
     }
 
-    public CurrencyOutEnum getCurrencyOut() {
+    public CurrencyEnum getCurrencyOut() {
         return this.currencyOut;
     }
 
@@ -42,11 +39,11 @@ public class CurrencyDto {
         return this.sum;
     }
 
-    public void setCurrencyIn(CurrencyInEnum currencyIn) {
+    public void setCurrencyIn(CurrencyEnum currencyIn) {
         this.currencyIn = currencyIn;
     }
 
-    public void setCurrencyOut(CurrencyOutEnum currencyOut) {
+    public void setCurrencyOut(CurrencyEnum currencyOut) {
         this.currencyOut = currencyOut;
     }
 

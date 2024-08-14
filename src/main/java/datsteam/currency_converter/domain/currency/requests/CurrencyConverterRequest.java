@@ -1,16 +1,19 @@
 package datsteam.currency_converter.domain.currency.requests;
 
-import datsteam.currency_converter.domain.currency.enums.CurrencyInEnum;
-import datsteam.currency_converter.domain.currency.enums.CurrencyOutEnum;
+import datsteam.currency_converter.domain.currency.enums.CurrencyActionEnum;
+import datsteam.currency_converter.domain.currency.enums.CurrencyEnum;
 import jakarta.validation.constraints.DecimalMin;
 import jakarta.validation.constraints.NotNull;
 
 public record CurrencyConverterRequest(
         @NotNull
-        CurrencyInEnum currencyIn,
+        CurrencyEnum currencyIn,
+        CurrencyEnum currencyIntermediate,
         @NotNull
-        CurrencyOutEnum currencyOut,
+        CurrencyEnum currencyOut,
         @DecimalMin("0.01")
-        Float count
+        Float count,
+        @NotNull
+        CurrencyActionEnum currencyAction
 ) {
 }
