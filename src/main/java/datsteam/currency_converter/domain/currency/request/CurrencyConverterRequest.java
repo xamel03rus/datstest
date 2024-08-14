@@ -1,7 +1,7 @@
-package datsteam.currency_converter.domain.currency.requests;
+package datsteam.currency_converter.domain.currency.request;
 
-import datsteam.currency_converter.domain.currency.enums.CurrencyActionEnum;
-import datsteam.currency_converter.domain.currency.enums.CurrencyEnum;
+import datsteam.currency_converter.domain.currency.enumeration.CurrencyActionEnum;
+import datsteam.currency_converter.domain.currency.enumeration.CurrencyEnum;
 import jakarta.validation.constraints.DecimalMin;
 import jakarta.validation.constraints.NotNull;
 

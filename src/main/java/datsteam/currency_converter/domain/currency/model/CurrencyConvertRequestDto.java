@@ -1,6 +1,6 @@
-package datsteam.currency_converter.domain.currency.models;
+package datsteam.currency_converter.domain.currency.model;
 
-import datsteam.currency_converter.domain.currency.enums.CurrencyEnum;
+import datsteam.currency_converter.domain.currency.enumeration.CurrencyEnum;
 
 public record CurrencyConvertRequestDto(
         CurrencyEnum currencyIn,
