@@ -24,7 +24,7 @@ public class CurrencyConverterManager {
         );
 
         if (!config.getConversions().contains(currentRequest)) {
-            throw new ResponseStatusException(HttpStatusCode.valueOf(400), "Unavailable pair");
+            throw new ResponseStatusException(HttpStatusCode.valueOf(404), "Unavailable pair");
         }
 
         return (CurrencyConverterService) applicationContext.getBean(
