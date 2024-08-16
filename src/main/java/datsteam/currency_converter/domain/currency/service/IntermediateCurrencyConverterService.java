@@ -24,9 +24,14 @@ public class IntermediateCurrencyConverterService implements CurrencyConverterSe
         currencyDtoFirst.setCurrencyOut(request.currencyOut());
         currencyDtoFirst.setValue(currencyDtoFirst.getValue() / currencyDtoSecond.getValue());
         currencyDtoFirst.setCount(request.count());
-        currencyDtoFirst.setSum(request.currencyAction().equals(CurrencyActionEnum.BUY) ?
-                request.count() * currencyDtoFirst.getValue() :
-                request.count() / currencyDtoFirst.getValue());
+
+        Float sum;
+        if (request.currencyAction().equals(CurrencyActionEnum.BUY)) {
+            sum = request.count() / currencyDtoFirst.getValue();
+        } else {
+            sum = request.count() * currencyDtoFirst.getValue();
+        }
+        currencyDtoFirst.setSum(sum);
 
         return currencyDtoFirst;
     }

@@ -6,13 +6,13 @@ import org.springframework.web.reactive.function.client.WebClient;
 
 @Configuration
 public class WebClientConfig {
-    private static final int bufferSize = 32 * 1024 * 1024;
+    private static final int BUFFER_SIZE = 32 * 1024 * 1024;
 
     @Bean
-    public WebClient getWebClient()
+    public WebClient webClient()
     {
         return WebClient.builder().codecs(configurer -> configurer
                         .defaultCodecs()
-                        .maxInMemorySize(bufferSize)).build();
+                        .maxInMemorySize(BUFFER_SIZE)).build();
     }
 }

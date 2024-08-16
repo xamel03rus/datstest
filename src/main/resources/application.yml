@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: currencyDto-converter
+
+settings:
+  caching:
+    ttl: 60000
+  conversions:
+    - currencyIn: RUB
+      currencyIntermediate:
+      currencyOut: CNY
+    - currencyIn: RUB
+      currencyIntermediate: CNY
+      currencyOut: USD
+    - currencyIn: RUB
+      currencyIntermediate: CNY
+      currencyOut: EUR
+    - currencyIn: CNY
+      currencyIntermediate:
+      currencyOut: USD
+    - currencyIn: CNY
+      currencyIntermediate:
+      currencyOut: EUR
