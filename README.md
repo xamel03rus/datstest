@@ -1,4 +1,4 @@
-# Test project for RUB:CNY pair exchange rate
+# Test project for RUB:USD, RUB:EUR pairs exchange rate
 
 ## Methods:
 - POST /convert
